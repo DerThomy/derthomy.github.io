@@ -1,0 +1,25 @@
+// Modern Academic Accent Colors
+$accent-color: #c56cff; // purple-pink accent
+$link-color: $accent-color;
+$link-hover-color: darken($accent-color, 10%);
+
+// Body + Typography
+body {
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  background-color: #fafafc;
+  color: #222;
+}
+
+// Headings
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+}
+
+// Navbar gradient accent
+.site-header {
+  background: linear-gradient(90deg, #b554ff, #ff5fa2);
+  color: white;
+  a { color: white !important; }
+}
