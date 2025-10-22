@@ -3,7 +3,7 @@ title: "LoD of Gaussians: Unified Training and Rendering for Ultra-Large Scale R
 collection: publications
 category: arxiv
 permalink: /publication/LOD-Gaussians
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'Enables abitrary scene scale for Gaussian Splatting reconstruction on single consumer GPU.'
 date: 2025-07-01
 venue: 'ArXiv'
 paperurl: 'https://arxiv.org/pdf/2507.01110'

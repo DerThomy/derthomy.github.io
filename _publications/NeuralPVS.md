@@ -3,7 +3,7 @@ title: "NeuralPVS: Learned Estimation of Potentially Visible Sets"
 collection: publications
 category: conferences
 permalink: /publication/NeuralPVS
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'Provides state of the art from region PVS calculation using deep neural networks.'
 date: 2025-09-29
 venue: 'SIGGRAPH Asia'
 paperurl: 'https://arxiv.org/pdf/2509.24677'

@@ -3,7 +3,7 @@ title: "Frustum Volume Caching for Accelerated NeRF Rendering"
 collection: publications
 category: manuscripts
 permalink: /publication/FruVoCA
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'Speeds up NeRF rendering by caching non view dependent MLP features in a froxel grid.'
 date: 2009-09-08    
 venue: 'Proceedings of the ACM on Computer Graphics and Interactive Techniques'
 paperurl: 'https://steimich96.github.io/FrustumVolumeCaching/assets/paper/FrustumVolumeCaching.pdf'

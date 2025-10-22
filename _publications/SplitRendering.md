@@ -3,7 +3,7 @@ title: "Image-Based Spatio-Temporal Upsampling for Split Rendering"
 collection: publications
 category: manuscripts
 permalink: /publication/SplitRendering
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'Enables smooth, high-quality rendering on ultra low-powered mobile devices by generating intermediate frames entirely from images using a novel spatio-temporal interpolation split rendering pipeline—without needing geometry or real-time rasterization'
 date: 2025-05-19    
 venue: 'Computer Graphics Forum'
 paperurl: 'https://derthomy.github.io/ImageBasedSpatioTemporalInterpolation/static/paper/Image_Based_Spatio_Temporal_Interpolation_for_Split_Rendering.pdf'
