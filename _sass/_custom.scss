@@ -1,0 +1,71 @@
+.archive__item-teaser img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+/* Flex layout for non-grid teaser display */
+/* --- Teaser beside excerpt (non-grid layout) --- */
+.archive__item {
+  overflow: hidden; /* contain float */
+}
+
+/* Make title always full-width, not wrapped by teaser */
+.archive__item-title {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Side teaser (for list/non-grid layouts) */
+.archive__item-teaser--side {
+  float: left;
+  width: 180px; /* reasonable fixed width */
+  margin: 0.25rem 1rem 0.5rem 0; /* spacing between image & text */
+}
+
+.archive__item-teaser--side .teaser-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* --- Grid layout teasers --- */
+.grid__item .archive__item-teaser {
+  width: 100%;
+  margin: 0 auto 0.75rem auto;
+}
+
+.grid__item .archive__item-teaser img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* --- Responsive handling --- */
+@media (max-width: 900px) {
+  /* Keep teaser modestly sized on medium screens */
+  .archive__item-teaser--side {
+    width: 140px;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Stack teaser on top for narrow screens */
+  .archive__item-teaser--side {
+    float: none;
+    width: 70%;          /* smaller than full width */
+    max-width: 300px;    /* prevents huge teaser */
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+
+  .archive__item-teaser--side .teaser-media {
+    width: 100%;
+    height: auto;
+  }
+}

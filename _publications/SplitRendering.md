@@ -9,6 +9,8 @@ venue: 'Computer Graphics Forum'
 paperurl: 'https://derthomy.github.io/ImageBasedSpatioTemporalInterpolation/static/paper/Image_Based_Spatio_Temporal_Interpolation_for_Split_Rendering.pdf'
 projecturl: https://derthomy.github.io/ImageBasedSpatioTemporalInterpolation
 citation: 'Thomas Köhler, Michael Steiner, Lukas Radl, Brian Budge, Markus Steinberger (2025). &quot;Image-Based Spatio-Temporal Upsampling for Split Rendering.&quot; <i>Computer Graphics Forum</i>. 8(44).'
+header:
+    teaser: "publications/splitrendering.gif"
 ---
 Low-powered devices -- such as small form factor head-mounted displays (HMDs) -- struggle to deliver a smooth and high-quality viewing experience, due to their limited power and rendering capabilities.
 Cloud rendering attempts to solve the quality issue, but leads to prohibitive latency and bandwidth requirements, hindering use with HMDs over mobile connections or even over Wifi.

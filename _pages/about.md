@@ -11,7 +11,7 @@ redirect_from:
 _PhD Researcher in Visual Computing_ at
 Graz University of Technology
 
-I explore the intersection of **computer graphics, neural rendering, and scene understanding**. My research focuses on developing **efficient and scalable techniques** for representing, synthesizing, and visualizing 3D scenes — from **Gaussian Splatting pipelines** to **dynamic scene generation and completion**.  
+I started my PhD in May 2025 with [Markus Steinberger](https://www.markussteinberger.net/) as my supervisor. I explore the intersection of **computer graphics, neural rendering, and scene understanding**. My research focuses on developing **efficient and scalable techniques** for representing, synthesizing, and visualizing 3D scenes — from **Gaussian Splatting pipelines** to **dynamic scene generation and completion**.  
 
 I am particularly interested in pushing the boundaries of **real-time graphics** and **interactive visual computing**, making complex 3D scenes accessible and actionable for both research and applications.
 
