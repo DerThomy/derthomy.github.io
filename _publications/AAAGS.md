@@ -6,7 +6,7 @@ permalink: /publication/AAA-Gaussians
 excerpt: '**<span style="color: red;">Highlight</span>** <br /> Introduces a fully 3D evaluation and filtering pipeline for Gaussian Splatting that eliminates aliasing, projection distortions, and popping artifacts through adaptive 3D smoothing, stable view-space bounding, and efficient 3D culling, enabling real-time artifact-free rendering even for out-of-distribution views.'
 date: 2025-10-23
 venue: 'Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)'
-paperurl: 'https://derthomy.github.io/ImageBasedSpatioTemporalInterpolation/static/paper/Image_Based_Spatio_Temporal_Interpolation_for_Split_Rendering.pdf'
+paperurl: 'https://derthomy.github.io/AAA-Gaussians/static/paper/AAA-Gaussians.pdf'
 projecturl: https://derthomy.github.io/AAA-Gaussians/
 citation: 'Thomas Köhler, Michael Steiner, Lukas Radl, Felix Windisch, Dieter Schmalstieg, Markus Steinberger (2025). &quot;AAA-Gaussians: Anti-Aliased and Artifact-Free 3D Gaussian Rendering.&quot; <i>ICCV</i>.'
 header:
