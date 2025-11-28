@@ -17,6 +17,4 @@ I am particularly interested in pushing the boundaries of **real-time graphics**
 
 On this site you can find my **research projects**, **publications**, and **demos** showcasing my work. I also maintain links to **code repositories** and **project pages** for many of my papers.
 
-When I’m not experimenting with graphics pipelines, you might find me **visualizing neural representations**, sketching out new ideas for interactive scene generation, or exploring the latest trends in **real-time rendering**.
-
 [**View Publications →**](/publications)
