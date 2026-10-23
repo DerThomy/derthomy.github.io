@@ -4,68 +4,206 @@
   object-fit: cover;
 }
 
-/* Flex layout for non-grid teaser display */
-/* --- Teaser beside excerpt (non-grid layout) --- */
+/* --- Modern Publications Flex Layout --- */
 .archive__item {
-  overflow: hidden; /* contain float */
+  margin-bottom: 2.25rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--global-border-color, #e5e5e5);
 }
 
-/* Make title always full-width, not wrapped by teaser */
+html[data-theme="dark"] .archive__item {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
 .archive__item-title {
   display: block;
   width: 100%;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #0969da;
+  text-decoration: none !important;
 }
 
-/* Side teaser (for list/non-grid layouts) */
+html[data-theme="dark"] .archive__item-title {
+  color: #58a6ff;
+}
+
+.archive__item:hover .archive__item-title {
+  text-decoration: none !important;
+}
+
+.archive__item-title a {
+  text-decoration: none !important;
+  color: inherit;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.archive__item-title a:hover {
+  text-decoration: none !important;
+  opacity: 0.85;
+}
+
+/* Flex container: vertically centers teaser with content on desktop */
+.archive__item-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Vertically centered */
+  gap: 1.75rem;
+}
+
+/* Side teaser: generous width so method comparisons like SteadySplats are clear */
 .archive__item-teaser--side {
-  float: left;
-  width: 180px; /* reasonable fixed width */
-  margin: 0.25rem 1rem 0.5rem 0; /* spacing between image & text */
+  float: none !important;
+  flex: 0 0 350px;
+  max-width: 360px;
+  width: 100%;
+  margin: 0 !important;
 }
 
-.archive__item-teaser--side .teaser-media {
+.archive__item-teaser--side .teaser-media,
+.archive__item-teaser--side video,
+.archive__item-teaser--side img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* --- Grid layout teasers --- */
-.grid__item .archive__item-teaser {
-  width: 100%;
-  margin: 0 auto 0.75rem auto;
+.archive__item-teaser--side:hover .teaser-media,
+.archive__item-teaser--side:hover video,
+.archive__item-teaser--side:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 }
 
-.grid__item .archive__item-teaser img {
-  width: 100%;
-  height: auto;
+.archive__item-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.archive__item-content .archive__item-authors {
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.45;
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  color: var(--global-text-color);
+}
+
+.archive__item-content .archive__item-authors strong {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.archive__item-content .page__date {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+  color: var(--global-text-color-light, #666);
+}
+
+/* Category headings (Conference Papers, Journal Articles, Preprints) */
+.archive h2 {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.archive h2:first-of-type {
+  margin-top: 2rem;
+}
+
+.archive h2 + hr {
+  margin-top: 0;
+  margin-bottom: 2.25rem;
+  border: 0;
+  border-top: 1px solid var(--global-border-color, #e5e5e5);
+}
+
+html[data-theme="dark"] .archive h2 + hr {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.archive__item-content .archive__item-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+  color: var(--global-text-color);
+}
+
+.archive__item-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.archive__item-links .btn {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 6px;
-  object-fit: cover;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
 }
 
 /* --- Responsive handling --- */
 @media (max-width: 900px) {
-  /* Keep teaser modestly sized on medium screens */
   .archive__item-teaser--side {
-    width: 140px;
+    flex: 0 0 280px;
+    max-width: 290px;
   }
 }
 
-@media (max-width: 700px) {
-  /* Stack teaser on top for narrow screens */
-  .archive__item-teaser--side {
-    float: none;
-    width: 70%;          /* smaller than full width */
-    max-width: 300px;    /* prevents huge teaser */
-    margin: 0 auto 1rem auto;
-    display: block;
+@media (max-width: 768px) {
+  .archive__item-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
   }
 
-  .archive__item-teaser--side .teaser-media {
+  .archive__item-teaser--side {
+    flex: none;
+    max-width: 100%;
     width: 100%;
-    height: auto;
+  }
+
+  .archive__item-teaser--side .teaser-media,
+  .archive__item-teaser--side video,
+  .archive__item-teaser--side img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .archive__item-title {
+    font-size: 1.15rem;
   }
 }
+
+/* --- Dark mode header contrast --- */
+html[data-theme="dark"] .masthead,
+html[data-theme="dark"] .masthead__menu-item {
+  background-color: var(--global-bg-color);
+}
+
+html[data-theme="dark"] .masthead a,
+html[data-theme="dark"] .greedy-nav a,
+html[data-theme="dark"] #theme-icon {
+  color: #f0f6fc !important;
+}
+
+html[data-theme="dark"] .masthead a:hover,
+html[data-theme="dark"] .greedy-nav a:hover {
+  color: #58a6ff !important;
+}
+

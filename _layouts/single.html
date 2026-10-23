@@ -45,6 +45,18 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% if page.header.teaser and page.collection == 'publications' %}
+          {% assign ext = page.header.teaser | split: '.' | last %}
+          <div style="max-width: 600px; margin: 0 0 1.5rem 0;">
+            {% if ext == 'mp4' or ext == 'webm' %}
+              <video autoplay loop muted playsinline style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                <source src="{% if page.header.teaser contains '://' %}{{ page.header.teaser }}{% else %}{{ page.header.teaser | prepend: '/images/' | prepend: base_path }}{% endif %}" type="video/{{ ext }}">
+              </video>
+            {% else %}
+              <img src="{% if page.header.teaser contains '://' %}{{ page.header.teaser }}{% else %}{{ page.header.teaser | prepend: '/images/' | prepend: base_path }}{% endif %}" alt="{{ page.title }}" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+            {% endif %}
+          </div>
+        {% endif %}
         {{ content }}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}

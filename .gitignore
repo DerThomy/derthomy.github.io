@@ -18,3 +18,13 @@ package-lock.json
 
 # Ignore folders related to IDEs
 .vscode/
+
+# Local preview scripts and generated preview artifacts
+/preview_*.html
+/build_preview.py
+/index.html
+/publications/
+/talks/
+/talks.html
+/assets/css/main.css
+
